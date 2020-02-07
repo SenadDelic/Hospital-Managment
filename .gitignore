@@ -1,2 +1,5 @@
 .idea/
 Hospital Managment.iml
+/bin/
+.classpath
+.project
