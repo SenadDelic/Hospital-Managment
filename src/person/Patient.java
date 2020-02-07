@@ -12,9 +12,8 @@ public class Patient extends Person {
 		
 	}
 	
-	
-	Patient(String firstName, String lastName, Date dateOfBirth) {
-		super(firstName, lastName, dateOfBirth);
+	Patient(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
+		super(firstName, lastName, dateOfBirth, userName, password);
 	}
 	
 	public void addDiagnose(Diagnose diagnose) {
@@ -26,7 +25,7 @@ public class Patient extends Person {
 	}
 	
 	public Diagnose getDiagnose(int index) {
-		if (index < 0 || index > diagnosis.size) {
+		if (index < 0 || index > diagnosis.size()) {
 			System.out.println("ERROR: INDEX NONEXSISTENT");
 		}
 		else {
@@ -47,7 +46,7 @@ public class Patient extends Person {
 	}
 	
 	public Doctor getDoctor(int index) {
-		if (index < 0 || index > doctors.size) {
+		if (index < 0 || index > doctors.size()) {
 			System.out.println("ERROR: INDEX NONEXISTENT");
 		}
 		else {
@@ -61,13 +60,13 @@ public class Patient extends Person {
 	
 	@Override
 	public String toString() {
-		return "First name: " + firstName + "\nLast name: " + lastName + "\nDate of birth: " + dateOfBirth
-				+ "\nUsername: " + username;
+		return "First name: " + getFirstName() + "\nLast name: " + getLastName() + "\nDate of birth: " + getDateOfBirth()
+				+ "\nUsername: " + getUserName();
 	}
 }
 
 
-
+s
 
 
 
