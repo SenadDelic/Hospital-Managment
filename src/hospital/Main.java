@@ -1,4 +1,4 @@
-package com.company;
+package hospital;
 
 public class Main {
 
