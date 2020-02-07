@@ -1,5 +1,7 @@
 package person;
 
+import hospital.Diagnose;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,7 +11,6 @@ public class Patient extends Person {
 	ArrayList<Doctor> doctors;
 	
 	Patient(){
-		
 	}
 	
 	Patient(String firstName, String lastName, Date dateOfBirth, String userName, String password) {

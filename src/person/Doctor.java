@@ -1,5 +1,7 @@
 package person;
 
+import hospital.Appoitment;
+
 import java.util.ArrayList;
 import java.util.Date;
 

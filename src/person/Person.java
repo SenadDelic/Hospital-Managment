@@ -69,6 +69,10 @@ public abstract class Person {
         this.password = password;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
