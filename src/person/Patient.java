@@ -26,10 +26,11 @@ public class Patient extends Person {
 	}
 	
 	public Diagnose getDiagnose(int index) {
-		for (int i = 0; i < diagnosis.size; i++) {
-			if (i == index) {
-				return diagnosis.get(i);
-			}
+		if (index < 0 || index > diagnosis.size) {
+			System.out.println("ERROR: INDEX NONEXSISTENT");
+		}
+		else {
+			return diagnosis.get(index);
 		}
 	}
 	
@@ -46,17 +47,16 @@ public class Patient extends Person {
 	}
 	
 	public Doctor getDoctor(int index) {
-		for (int i = 0; i < doctors.size; i++) {
-			if (i == index) {
-				return doctors.get(i);
-			}
+		if (index < 0 || index > doctors.size) {
+			System.out.println("ERROR: INDEX NONEXISTENT");
+		}
+		else {
+			return doctors.get(index);
 		}
 	}
 	
 	public ArrayList<Doctor> getDoctor(){
-		for (Doctor doctor : doctors) {
-			System.out.println(doctor);
-		}
+		return doctors;
 	}
 	
 	@Override
