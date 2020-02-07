@@ -8,9 +8,11 @@ public abstract class Person {
     private Date dateOfBirth;
     private String userName;
     private String password;
-    private static int id;
-
+    private int id;
+    private static int allId;
+    
     public Person() {
+    	id = allId++;
     }
 
     public Person(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
@@ -19,8 +21,8 @@ public abstract class Person {
         this.dateOfBirth = dateOfBirth;
         this.userName = userName;
         this.password = password;
-        id++;
-    }
+        id = allId++;
+}
 
     public Person(String userName, String password) {
         this.userName = userName;
