@@ -27,10 +27,10 @@ public class Patient extends Person {
 	public Diagnose getDiagnose(int index) {
 		if (index < 0 || index > diagnosis.size()) {
 			System.out.println("ERROR: INDEX NONEXSISTENT");
+			return null;
 		}
-		else {
+		else
 			return diagnosis.get(index);
-		}
 	}
 	
 	public ArrayList<Diagnose> getDiagnose(){
@@ -48,6 +48,7 @@ public class Patient extends Person {
 	public Doctor getDoctor(int index) {
 		if (index < 0 || index > doctors.size()) {
 			System.out.println("ERROR: INDEX NONEXISTENT");
+			return null;
 		}
 		else {
 			return doctors.get(index);
