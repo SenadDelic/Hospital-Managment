@@ -66,8 +66,6 @@ public class Patient extends Person {
 }
 
 
-s
-
 
 
 
