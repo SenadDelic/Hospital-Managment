@@ -1,11 +1,13 @@
 package hospital;
 
+import java.util.Date;
+
 public class Diagnose {
 	
 	private String nameOfDiagnose;
 	private String commentOfDiagnose;
 	private Doctor doctor;
-	private Date date = new Date;
+	private Date date = new Date();
 	
 	public Diagnose(String nameOfDiagnose, String commentOfDiagnose, Doctor doctor) {
 		this.nameOfDiagnose = nameOfDiagnose;
