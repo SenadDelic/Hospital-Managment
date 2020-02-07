@@ -19,7 +19,7 @@ public abstract class Person {
         this.dateOfBirth = dateOfBirth;
         this.userName = userName;
         this.password = password;
-        this.id++;
+        id++;
     }
 
     public Person(String userName, String password) {
