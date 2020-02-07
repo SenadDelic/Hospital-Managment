@@ -14,9 +14,7 @@ public class Patient extends Person {
 	
 	
 	Patient(String firstName, String lastName, Date dateOfBirth) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
+		
 	}
 	
 	public void addDiagnose(Diagnose diagnose) {
