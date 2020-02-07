@@ -2,6 +2,7 @@ package person;
 
 import java.util.Date;
 
+import hospital.Department;
 import hospital.Salary;
 
 public abstract class Employe extends Person {
