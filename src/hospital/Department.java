@@ -1,6 +1,9 @@
 package hospital;
 
 import java.util.ArrayList;
+
+import person.Doctor;
+import person.Nurse;
 import room.Room;
 
 public class Department {
@@ -14,7 +17,6 @@ public class Department {
 	
 	
 	public Department() {
-		
 	}
 	
 	public Department(String nameOfDepartment) {
@@ -37,6 +39,4 @@ public class Department {
 			rooms.add(index, rooms);
 		}
 	}
-	
-	
 }

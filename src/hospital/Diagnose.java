@@ -1,5 +1,7 @@
 package hospital;
 
+import person.Doctor;
+
 import java.util.Date;
 
 public class Diagnose {
