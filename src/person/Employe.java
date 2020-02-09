@@ -34,7 +34,6 @@ public abstract class Employe extends Person {
         this.department = department;
     }
 
-
     @Override
     public String toString() {
         return "Employe [startDate=" + startDate + "]";

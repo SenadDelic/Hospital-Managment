@@ -14,8 +14,7 @@ public class Department {
 	private ArrayList<Nurse> listOfNurses;
 	private ArrayList<Appointment> pending;
 	private ArrayList<Appointment> done;
-	
-	
+
 	public Department() {
 	}
 	

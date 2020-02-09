@@ -1,5 +1,7 @@
 package room;
 
+import hospital.Department;
+
 public abstract class Room {
 	private int roomNumber;
 	private Department department;
