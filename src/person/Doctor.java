@@ -59,13 +59,13 @@ public class Doctor extends Employe {
     }
 
     void resolveAppointment(int index, String nameOfDiagnose, String comment) {
-       Appointment tempAppoitment =  listOfAppointments.get(index);
-       Patient tempPatient= tempAppoitment.getPatient();
-       Department tempDepartment = tempAppoitment.getDepartment();
+       Appointment tempAppointment =  listOfAppointments.get(index);
+       Patient tempPatient= tempAppointment.getPatient();
+       Department tempDepartment = tempAppointment.getDepartment();
        
-       tempAppoitment.setDone(true);
+       tempAppointment.setDone(true);
        tempPatient.addDiagnose(new Diagnose(nameOfDiagnose, comment, this));
-       tempDepartment.addDoneAppointment(tempAppoitment);
-       deleteAppointment(tempAppoitment);
+       tempDepartment.addDoneAppointment(tempAppointment);
+       deleteAppointment(tempAppointment);
     }
 }

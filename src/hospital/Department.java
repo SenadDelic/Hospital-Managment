@@ -8,7 +8,6 @@ import person.Nurse;
 import room.Room;
 
 public class Department {
-
     private String nameOfDepartment;
     private ArrayList<Room> rooms;
     private ArrayList<Doctor> listOfDoctors;
@@ -17,7 +16,6 @@ public class Department {
     private ArrayList<Appointment> done;
 
     public Department() {
-    	
     }
 
     public Department(String nameOfDepartment) {
@@ -72,7 +70,7 @@ public class Department {
     public Nurse getNurse(int index) {
         return listOfNurses.get(index);
     }
-    
+
     public void addPendingAppointment(Appointment appointment) {
         pending.add(appointment);
     }
@@ -81,10 +79,10 @@ public class Department {
         return pending;
     }
 
-    public Appointment getPendingAppoitment(int index) {
+    public Appointment getPendingAppointment(int index) {
         return pending.get(index);
     }
-    
+
     public void addDoneAppointment(Appointment appointment) {
         done.add(appointment);
     }
@@ -93,7 +91,7 @@ public class Department {
         return done;
     }
 
-    public Appointment getDoneAppoitment(int index) {
+    public Appointment getDoneAppointment(int index) {
         return done.get(index);
-    }   
+    }
 }
