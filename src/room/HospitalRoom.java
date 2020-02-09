@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import hospital.Department;
 import person.Patient;
 
-public class BolesnickaSoba extends Room {
+public class HospitalRoom extends Room {
     private int numberOfBeds;
     private ArrayList<Patient> listOfPatient;
 
-    public BolesnickaSoba() {
+    public HospitalRoom() {
     }
 
-    public BolesnickaSoba(int roomNumber, Department department, int numberOfBeds) {
+    public HospitalRoom(int roomNumber, Department department, int numberOfBeds) {
         super(roomNumber, department);
         this.numberOfBeds = numberOfBeds;
     }
