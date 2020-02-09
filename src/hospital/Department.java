@@ -17,11 +17,7 @@ public class Department {
     private ArrayList<Appointment> done;
 
     public Department() {
-        rooms = new ArrayList<>();
-        listOfDoctors = new ArrayList<>();
-        listOfNurses = new ArrayList<>();
-        pending = new ArrayList<>();
-        done = new ArrayList<>();
+    	
     }
 
     public Department(String nameOfDepartment) {
@@ -76,4 +72,28 @@ public class Department {
     public Nurse getNurse(int index) {
         return listOfNurses.get(index);
     }
+    
+    public void addPendingAppointment(Appointment appointment) {
+        pending.add(appointment);
+    }
+
+    public ArrayList<Appointment> getListOfPendingAppointments() {
+        return pending;
+    }
+
+    public Appointment getPendingAppoitment(int index) {
+        return pending.get(index);
+    }
+    
+    public void addDoneAppointment(Appointment appointment) {
+        done.add(appointment);
+    }
+
+    public ArrayList<Appointment> getListOfDoneAppointments() {
+        return done;
+    }
+
+    public Appointment getDoneAppoitment(int index) {
+        return done.get(index);
+    }   
 }

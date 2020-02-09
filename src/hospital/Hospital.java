@@ -18,6 +18,8 @@ public class Hospital {
 	public Hospital(String nameOfHospital) {
 		super();
 		this.nameOfHospital = nameOfHospital;
+		patients = new ArrayList<Patient>();
+		departments = new ArrayList<Department>();
 	}
 
 	public String getNameOfHospital() {

@@ -15,6 +15,8 @@ public class Patient extends Person {
 	
 	public Patient(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
 		super(firstName, lastName, dateOfBirth, userName, password);
+		diagnosis = new ArrayList<Diagnose>();
+		doctors = new ArrayList<Doctor>();
 	}
 	
 	public void addDiagnose(Diagnose diagnose) {

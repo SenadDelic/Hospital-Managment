@@ -1,6 +1,7 @@
 package person;
 
 import hospital.Appointment;
+import hospital.Department;
 import hospital.Diagnose;
 
 import java.util.ArrayList;
@@ -18,6 +19,8 @@ public class Doctor extends Employe {
     public Doctor(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
         super(firstName, lastName, dateOfBirth, userName, password);
         this.isHeadDoctor = false;
+        listOfPatients = new ArrayList<Patient>();
+        listOfAppointments = new ArrayList<Appointment>();
     }
 
     public boolean isHeadDoctor() {
@@ -50,16 +53,19 @@ public class Doctor extends Employe {
         else
             System.out.println("Sta ti je baa...");
     }
+    
+    void deleteAppointment(Appointment appointment) {
+        listOfAppointments.remove(appointment);
+    }
 
-    void resolveAppointment() {
-        Diagnose diagnose = new Diagnose();
-        Appointment appointment = new Appointment();
-
-        String nameOfDiagnose = diagnose.getNameOfDiagnose();
-        String commentOnDiagnose = diagnose.getCommentOfDiagnose();
-        Patient patient = appointment.getPatient();
-
-        Diagnose diagnoseOfPatient = new Diagnose(nameOfDiagnose, commentOnDiagnose, this);
-        patient.addDiagnose(diagnoseOfPatient);
+    void resolveAppointment(int index, String nameOfDiagnose, String comment) {
+       Appointment tempAppoitment =  listOfAppointments.get(index);
+       Patient tempPatient= tempAppoitment.getPatient();
+       Department tempDepartment = tempAppoitment.getDepartment();
+       
+       tempAppoitment.setDone(true);
+       tempPatient.addDiagnose(new Diagnose(nameOfDiagnose, comment, this));
+       tempDepartment.addDoneAppointment(tempAppoitment);
+       deleteAppointment(tempAppoitment);
     }
 }

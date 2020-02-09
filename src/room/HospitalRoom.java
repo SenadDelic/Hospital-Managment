@@ -15,6 +15,7 @@ public class HospitalRoom extends Room {
     public HospitalRoom(int roomNumber, Department department, int numberOfBeds) {
         super(roomNumber, department);
         this.numberOfBeds = numberOfBeds;
+        listOfPatient = new ArrayList<Patient>();
     }
 
     public int getNumberOfBeds() {
