@@ -1,6 +1,7 @@
 package person;
 
-import hospital.Appoitment;
+import hospital.Appointment;
+import hospital.Diagnose;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +9,7 @@ import java.util.Date;
 public class Doctor extends Employe {
     private ArrayList<Patient> listOfPatients;
     private boolean isHeadDoctor;
-    private ArrayList<Appoitment> listOfAppointments;
+    private ArrayList<Appointment> listOfAppointments;
 
     public Doctor() {
         this.isHeadDoctor = false;
@@ -31,16 +32,16 @@ public class Doctor extends Employe {
         return listOfPatients;
     }
 
-    public ArrayList<Appoitment> getListOfAppointments() {
+    public ArrayList<Appointment> getListOfAppointments() {
         return listOfAppointments;
     }
 
-    void addAppointment(Appoitment appoitment) {
-        listOfAppointments.add(appoitment);
+    void addAppointment(Appointment appointment) {
+        listOfAppointments.add(appointment);
     }
 
-    void updateAppointment(int index, Appoitment appoitment) {
-        listOfAppointments.add(index, appoitment);
+    void updateAppointment(int index, Appointment appointment) {
+        listOfAppointments.add(index, appointment);
     }
 
     void deleteAppointment(int index) {
@@ -48,5 +49,17 @@ public class Doctor extends Employe {
             listOfAppointments.remove(index);
         else
             System.out.println("Sta ti je baa...");
+    }
+
+    void resolveAppointment() {
+        Diagnose diagnose = new Diagnose();
+        Appointment appointment = new Appointment();
+
+        String nameOfDiagnose = diagnose.getNameOfDiagnose();
+        String commentOnDiagnose = diagnose.getCommentOfDiagnose();
+        Patient patient = appointment.getPatient();
+
+        Diagnose diagnoseOfPatient = new Diagnose(nameOfDiagnose, commentOnDiagnose, this);
+        patient.addDiagnose(diagnoseOfPatient);
     }
 }

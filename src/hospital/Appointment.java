@@ -5,21 +5,21 @@ import java.util.Date;
 import person.Patient;
 import room.Room;
 
-public class Appoitment {
+public class Appointment {
 	public Patient patient;
-	public Date dateOfAppoitmentDate;
+	public Date dateOfAppointment;
 	public Room room;
 	public boolean isDone;
 	public Department department;
 
-	public Appoitment() {
+	public Appointment() {
 		super();
 	}
 
-	public Appoitment(Patient patient, Date dateOfAppoitmentDate, Room room) {
+	public Appointment(Patient patient, Date dateOfAppointment, Room room) {
 		super();
 		this.patient = patient;
-		this.dateOfAppoitmentDate = dateOfAppoitmentDate;
+		this.dateOfAppointment = dateOfAppointment;
 		this.room = room;
 	}
 
@@ -31,12 +31,12 @@ public class Appoitment {
 		this.patient = patient;
 	}
 
-	public Date getDateOfAppoitmentDate() {
-		return dateOfAppoitmentDate;
+	public Date getDateOfAppointment() {
+		return dateOfAppointment;
 	}
 
-	public void setDateOfAppoitmentDate(Date dateOfAppoitmentDate) {
-		this.dateOfAppoitmentDate = dateOfAppoitmentDate;
+	public void setDateOfAppointment(Date dateOfAppointment) {
+		this.dateOfAppointment = dateOfAppointment;
 	}
 
 	public Room getRoom() {
@@ -65,7 +65,7 @@ public class Appoitment {
 
 	@Override
 	public String toString() {
-		return "Appoitment [patient=" + patient + ", dateOfAppoitmentDate=" + dateOfAppoitmentDate + ", room=" + room
+		return "Appointment [patient=" + patient + ", dateOfAppointment=" + dateOfAppointment + ", room=" + room
 				+ ", isDone=" + isDone + "]";
 	}
 
