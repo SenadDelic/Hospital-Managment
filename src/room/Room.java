@@ -28,4 +28,5 @@ public abstract class Room {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
+
 }

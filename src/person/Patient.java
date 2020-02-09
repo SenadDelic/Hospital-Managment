@@ -10,10 +10,10 @@ public class Patient extends Person {
 	ArrayList<Diagnose> diagnosis;
 	ArrayList<Doctor> doctors;
 	
-	Patient(){
+	public Patient(){
 	}
 	
-	Patient(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
+	public Patient(String firstName, String lastName, Date dateOfBirth, String userName, String password) {
 		super(firstName, lastName, dateOfBirth, userName, password);
 	}
 	

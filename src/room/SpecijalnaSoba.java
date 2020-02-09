@@ -1,5 +1,7 @@
 package room;
 
+import hospital.Department;
+
 enum Svrha {
 	DayRoom,
 	DeliveryRoom,
@@ -12,8 +14,8 @@ public class SpecijalnaSoba extends Room {
 	
 	public SpecijalnaSoba() {}
 	
-	public SpecijalnaSoba(int rooomNumber, Department department, Svrha svrha) {
-		super(rooomNumber, department);
+	public SpecijalnaSoba(int roomNumber, Department department, Svrha svrha) {
+		super(roomNumber, department);
 		this.svrha = svrha;
 	}
 	
