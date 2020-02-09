@@ -1,6 +1,7 @@
 package person;
 
 import hospital.Appointment;
+import hospital.Diagnose;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -48,5 +49,17 @@ public class Doctor extends Employe {
             listOfAppointments.remove(index);
         else
             System.out.println("Sta ti je baa...");
+    }
+
+    void resolveAppointment() {
+        Diagnose diagnose = new Diagnose();
+        Appointment appointment = new Appointment();
+
+        String nameOfDiagnose = diagnose.getNameOfDiagnose();
+        String commentOnDiagnose = diagnose.getCommentOfDiagnose();
+        Patient patient = appointment.getPatient();
+
+        Diagnose diagnoseOfPatient = new Diagnose(nameOfDiagnose, commentOnDiagnose, this);
+        patient.addDiagnose(diagnoseOfPatient);
     }
 }
