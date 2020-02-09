@@ -8,8 +8,8 @@ import java.util.Date;
 
 public class Doctor extends Employe {
     private ArrayList<Patient> listOfPatients;
-    private boolean isHeadDoctor;
     private ArrayList<Appointment> listOfAppointments;
+    private boolean isHeadDoctor;
 
     public Doctor() {
         this.isHeadDoctor = false;
